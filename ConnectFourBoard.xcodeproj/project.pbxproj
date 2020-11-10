@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07AA519F255B0F7B00C6D8AC /* SetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA519E255B0F7B00C6D8AC /* SetTests.swift */; };
+		07AA51A3255B10C300C6D8AC /* Conn4Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA51A2255B10C300C6D8AC /* Conn4Piece.swift */; };
+		07AA51A7255B10EF00C6D8AC /* Conn4Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA51A6255B10EF00C6D8AC /* Conn4Player.swift */; };
 		07DA9B58254B074000D51B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DA9B57254B074000D51B66 /* AppDelegate.swift */; };
 		07DA9B5A254B074000D51B66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DA9B59254B074000D51B66 /* SceneDelegate.swift */; };
 		07DA9B5C254B074000D51B66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DA9B5B254B074000D51B66 /* ViewController.swift */; };
@@ -16,7 +19,22 @@
 		07DA9B6D254B078F00D51B66 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DA9B6C254B078F00D51B66 /* BoardView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		07AA5195255B0F3900C6D8AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DA9B4C254B074000D51B66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07DA9B53254B074000D51B66;
+			remoteInfo = ConnectFourBoard;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		07AA5190255B0F3900C6D8AC /* Connect4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Connect4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07AA5194255B0F3900C6D8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07AA519E255B0F7B00C6D8AC /* SetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTests.swift; sourceTree = "<group>"; };
+		07AA51A2255B10C300C6D8AC /* Conn4Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4Piece.swift; sourceTree = "<group>"; };
+		07AA51A6255B10EF00C6D8AC /* Conn4Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4Player.swift; sourceTree = "<group>"; };
 		07DA9B54254B074000D51B66 /* ConnectFourBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectFourBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DA9B57254B074000D51B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07DA9B59254B074000D51B66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		07AA518D255B0F3900C6D8AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07DA9B51254B074000D51B66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -39,10 +64,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07AA5191255B0F3900C6D8AC /* Connect4Tests */ = {
+			isa = PBXGroup;
+			children = (
+				07AA5194255B0F3900C6D8AC /* Info.plist */,
+				07AA519E255B0F7B00C6D8AC /* SetTests.swift */,
+			);
+			path = Connect4Tests;
+			sourceTree = "<group>";
+		};
 		07DA9B4B254B074000D51B66 = {
 			isa = PBXGroup;
 			children = (
 				07DA9B56254B074000D51B66 /* ConnectFourBoard */,
+				07AA5191255B0F3900C6D8AC /* Connect4Tests */,
 				07DA9B55254B074000D51B66 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				07DA9B54254B074000D51B66 /* ConnectFourBoard.app */,
+				07AA5190255B0F3900C6D8AC /* Connect4Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +94,8 @@
 		07DA9B56254B074000D51B66 /* ConnectFourBoard */ = {
 			isa = PBXGroup;
 			children = (
+				07AA51A6255B10EF00C6D8AC /* Conn4Player.swift */,
+				07AA51A2255B10C300C6D8AC /* Conn4Piece.swift */,
 				07DA9B57254B074000D51B66 /* AppDelegate.swift */,
 				07DA9B59254B074000D51B66 /* SceneDelegate.swift */,
 				07DA9B6C254B078F00D51B66 /* BoardView.swift */,
@@ -73,6 +111,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		07AA518F255B0F3900C6D8AC /* Connect4Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07AA5199255B0F3900C6D8AC /* Build configuration list for PBXNativeTarget "Connect4Tests" */;
+			buildPhases = (
+				07AA518C255B0F3900C6D8AC /* Sources */,
+				07AA518D255B0F3900C6D8AC /* Frameworks */,
+				07AA518E255B0F3900C6D8AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07AA5196255B0F3900C6D8AC /* PBXTargetDependency */,
+			);
+			name = Connect4Tests;
+			productName = Connect4Tests;
+			productReference = 07AA5190255B0F3900C6D8AC /* Connect4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		07DA9B53254B074000D51B66 /* ConnectFourBoard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07DA9B68254B074000D51B66 /* Build configuration list for PBXNativeTarget "ConnectFourBoard" */;
@@ -99,6 +155,11 @@
 				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
+					07AA518F255B0F3900C6D8AC = {
+						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
+						TestTargetID = 07DA9B53254B074000D51B66;
+					};
 					07DA9B53254B074000D51B66 = {
 						CreatedOnToolsVersion = 12.1;
 					};
@@ -118,11 +179,19 @@
 			projectRoot = "";
 			targets = (
 				07DA9B53254B074000D51B66 /* ConnectFourBoard */,
+				07AA518F255B0F3900C6D8AC /* Connect4Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		07AA518E255B0F3900C6D8AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07DA9B52254B074000D51B66 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,18 +205,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		07AA518C255B0F3900C6D8AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07AA519F255B0F7B00C6D8AC /* SetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07DA9B50254B074000D51B66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				07DA9B5C254B074000D51B66 /* ViewController.swift in Sources */,
+				07AA51A3255B10C300C6D8AC /* Conn4Piece.swift in Sources */,
 				07DA9B6D254B078F00D51B66 /* BoardView.swift in Sources */,
 				07DA9B58254B074000D51B66 /* AppDelegate.swift in Sources */,
 				07DA9B5A254B074000D51B66 /* SceneDelegate.swift in Sources */,
+				07AA51A7255B10EF00C6D8AC /* Conn4Player.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07AA5196255B0F3900C6D8AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07DA9B53254B074000D51B66 /* ConnectFourBoard */;
+			targetProxy = 07AA5195255B0F3900C6D8AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		07DA9B5D254B074000D51B66 /* Main.storyboard */ = {
@@ -169,6 +256,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		07AA5197255B0F3900C6D8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J8B74FCZCC;
+				INFOPLIST_FILE = Connect4Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goldthumb.Connect4Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConnectFourBoard.app/ConnectFourBoard";
+			};
+			name = Debug;
+		};
+		07AA5198255B0F3900C6D8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J8B74FCZCC;
+				INFOPLIST_FILE = Connect4Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goldthumb.Connect4Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConnectFourBoard.app/ConnectFourBoard";
+			};
+			name = Release;
+		};
 		07DA9B66254B074000D51B66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -326,6 +456,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		07AA5199255B0F3900C6D8AC /* Build configuration list for PBXNativeTarget "Connect4Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07AA5197255B0F3900C6D8AC /* Debug */,
+				07AA5198255B0F3900C6D8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		07DA9B4F254B074000D51B66 /* Build configuration list for PBXProject "ConnectFourBoard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
