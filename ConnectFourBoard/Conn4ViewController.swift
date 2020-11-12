@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import MultipeerConnectivity
 
-class ViewController: UIViewController {
+class Conn4ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
