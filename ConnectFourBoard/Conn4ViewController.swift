@@ -9,14 +9,23 @@ import UIKit
 import MultipeerConnectivity
 
 class Conn4ViewController: UIViewController {
+    
+    var peerID: MCPeerID!
+    var session: MCSession!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        peerID = MCPeerID(displayName: UIDevice.current.name)
+        session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
     }
 
     @IBAction func invite(_ sender: UIButton) {
         print("invite button clicked")
+        let browser = MCBrowserViewController(serviceType: "gt-conn4", session: session)
+        browser.delegate = self
+        present(browser, animated: true)
     }
 }
 
@@ -42,13 +51,13 @@ extension Conn4ViewController: MCSessionDelegate {
     }
 }
 
-extension Conn4ViewController: MCNearbyServiceBrowserDelegate {
-    func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
-        
+extension Conn4ViewController: MCBrowserViewControllerDelegate {
+    func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
+        dismiss(animated: true)
     }
     
-    func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
-        
+    func browserViewControllerWasCancelled(_ browserViewController: MCBrowserViewController) {
+        dismiss(animated: true)
     }
 }
 
