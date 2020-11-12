@@ -15,7 +15,9 @@ class Conn4ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func invite(_ sender: UIButton) {
+        print("invite button clicked")
+    }
 }
 
 extension Conn4ViewController: MCSessionDelegate {
