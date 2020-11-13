@@ -31,14 +31,24 @@
                                     <action selector="invite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X6i-kI-rvh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hnk-g6-U9Z">
+                                <rect key="frame" x="20" y="652" width="146" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="Advertise"/>
+                                <connections>
+                                    <action selector="advertise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GE7-fG-jb1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wpj-gF-VSm" secondAttribute="trailing" constant="20" id="4i8-Ly-V5B"/>
+                            <constraint firstItem="Hnk-g6-U9Z" firstAttribute="top" secondItem="wpj-gF-VSm" secondAttribute="bottom" constant="8" symbolic="YES" id="97z-wV-8mj"/>
                             <constraint firstItem="doa-od-H6O" firstAttribute="top" secondItem="wpj-gF-VSm" secondAttribute="bottom" constant="8" symbolic="YES" id="FPF-aV-tdJ"/>
                             <constraint firstItem="wpj-gF-VSm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="IFV-d2-16C"/>
                             <constraint firstItem="wpj-gF-VSm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fCB-IV-Y8I"/>
+                            <constraint firstItem="Hnk-g6-U9Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lT1-C0-kVH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="doa-od-H6O" secondAttribute="trailing" constant="20" id="wMh-TG-lBc"/>
                         </constraints>
                     </view>

@@ -12,7 +12,7 @@ class Conn4ViewController: UIViewController {
     
     var peerID: MCPeerID!
     var session: MCSession!
-    
+    var nearbyServiceAdvertiser: MCNearbyServiceAdvertiser!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,14 @@ class Conn4ViewController: UIViewController {
         peerID = MCPeerID(displayName: UIDevice.current.name)
         session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
     }
+    
+    @IBAction func advertise(_ sender: UIButton) {
+        nearbyServiceAdvertiser = MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: "gt-conn4")
+        nearbyServiceAdvertiser.delegate = self
+        nearbyServiceAdvertiser.startAdvertisingPeer()
+    }
 
     @IBAction func invite(_ sender: UIButton) {
-        print("invite button clicked")
         let browser = MCBrowserViewController(serviceType: "gt-conn4", session: session)
         browser.delegate = self
         present(browser, animated: true)
@@ -63,6 +68,6 @@ extension Conn4ViewController: MCBrowserViewControllerDelegate {
 
 extension Conn4ViewController: MCNearbyServiceAdvertiserDelegate {
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
-        
+        invitationHandler(true, session)
     }
 }
