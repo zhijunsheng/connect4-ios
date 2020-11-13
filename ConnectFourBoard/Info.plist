@@ -62,5 +62,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>connect4 game</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_gt-conn4._tcp</string>
+	</array>
 </dict>
 </plist>
