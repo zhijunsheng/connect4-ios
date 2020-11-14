@@ -22,6 +22,7 @@ class Conn4ViewController: UIViewController {
         
         peerID = MCPeerID(displayName: UIDevice.current.name)
         session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
+        session.delegate = self
         
         boardView.shadowPiecesBox = conn4Board.piecesBox
     }
@@ -49,7 +50,16 @@ class Conn4ViewController: UIViewController {
 
 extension Conn4ViewController: MCSessionDelegate {
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
-        
+        switch state {
+        case .connecting:
+            print("\(peerID): connecting")
+        case .connected:
+            print("\(peerID): connected")
+        case .notConnected:
+            print("\(peerID): not connected")
+        @unknown default:
+            print("\(peerID): unknown state encountered: \(state)")
+        }
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
