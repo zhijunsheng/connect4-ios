@@ -25,7 +25,10 @@ class Conn4ViewController: UIViewController {
         
         // for testing
         conn4Board.dropAt(col: 3, player: .red)
-        conn4Board.dropAt(col: 5, player: .yellow)
+        conn4Board.dropAt(col: 3, player: .yellow)
+        conn4Board.dropAt(col: 3, player: .red)
+        conn4Board.dropAt(col: 3, player: .red)
+        
         boardView.shadowPiecesBox = conn4Board.piecesBox
     }
     

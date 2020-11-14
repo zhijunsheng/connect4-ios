@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07988E5E255F97660082B1D4 /* Conn4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07988E5D255F97660082B1D4 /* Conn4Tests.swift */; };
+		07988E5E255F97660082B1D4 /* Conn4BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07988E5D255F97660082B1D4 /* Conn4BoardTests.swift */; };
 		07988E62255F97C80082B1D4 /* Conn4Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07988E61255F97C80082B1D4 /* Conn4Board.swift */; };
 		07AA519F255B0F7B00C6D8AC /* SetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA519E255B0F7B00C6D8AC /* SetTests.swift */; };
 		07AA51A3255B10C300C6D8AC /* Conn4Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA51A2255B10C300C6D8AC /* Conn4Piece.swift */; };
@@ -32,7 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07988E5D255F97660082B1D4 /* Conn4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4Tests.swift; sourceTree = "<group>"; };
+		07988E5D255F97660082B1D4 /* Conn4BoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4BoardTests.swift; sourceTree = "<group>"; };
 		07988E61255F97C80082B1D4 /* Conn4Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4Board.swift; sourceTree = "<group>"; };
 		07AA5190255B0F3900C6D8AC /* Connect4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Connect4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07AA5194255B0F3900C6D8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 			children = (
 				07AA5194255B0F3900C6D8AC /* Info.plist */,
 				07AA519E255B0F7B00C6D8AC /* SetTests.swift */,
-				07988E5D255F97660082B1D4 /* Conn4Tests.swift */,
+				07988E5D255F97660082B1D4 /* Conn4BoardTests.swift */,
 			);
 			path = Connect4Tests;
 			sourceTree = "<group>";
@@ -215,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07988E5E255F97660082B1D4 /* Conn4Tests.swift in Sources */,
+				07988E5E255F97660082B1D4 /* Conn4BoardTests.swift in Sources */,
 				07AA519F255B0F7B00C6D8AC /* SetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

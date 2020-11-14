@@ -11,9 +11,21 @@ struct Conn4Board: CustomStringConvertible {
     private(set) var piecesBox: Set<Conn4Piece> = []
     
     mutating func dropAt(col: Int, player: Conn4Player) {
-        // for the first drop only
-        let droppedPiece = Conn4Piece(col: col, row: 0, player: player)
+        let numberOfPieces = numberOfPiecesAt(col: col)
+        let droppedPiece = Conn4Piece(col: col, row: numberOfPieces, player: player)
         piecesBox.insert(droppedPiece)
+    }
+    
+    func numberOfPiecesAt(col: Int) -> Int {
+        var count: Int = 0
+        
+        for piece in piecesBox {
+            if piece.col == col {
+                count += 1
+            }
+        }
+        
+        return count
     }
     
     func pieceAt(col: Int, row: Int) -> Conn4Piece? {
