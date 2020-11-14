@@ -11,8 +11,9 @@ import XCTest
 class Conn4Tests: XCTestCase {
 
     func testConn4BoardDescription() {
-        let conn4Board = Conn4Board()
-        
+        var conn4Board = Conn4Board()
+        conn4Board.dropAt(col: 3, player: .red)
+        conn4Board.dropAt(col: 5, player: .yellow)
         print(conn4Board)
         
     }
