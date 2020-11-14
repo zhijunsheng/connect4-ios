@@ -9,16 +9,24 @@ import UIKit
 import MultipeerConnectivity
 
 class Conn4ViewController: UIViewController {
+    var conn4Board = Conn4Board()
     
     var peerID: MCPeerID!
     var session: MCSession!
     var nearbyServiceAdvertiser: MCNearbyServiceAdvertiser!
 
+    @IBOutlet weak var boardView: BoardView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         peerID = MCPeerID(displayName: UIDevice.current.name)
         session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
+        
+        // for testing
+        conn4Board.dropAt(col: 3, player: .red)
+        conn4Board.dropAt(col: 5, player: .yellow)
+        boardView.shadowPiecesBox = conn4Board.piecesBox
     }
     
     @IBAction func advertise(_ sender: UIButton) {

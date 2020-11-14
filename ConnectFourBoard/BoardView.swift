@@ -15,9 +15,6 @@ class BoardView: UIView {
     var shadowPiecesBox: Set<Conn4Piece> = []
 
     override func draw(_ rect: CGRect) {
-        // tmp code
-        shadowPiecesBox.insert(Conn4Piece(col: 0, row: 0, player: .red))
-        
         cellSide = bounds.width / 7
         originX = 0.5 * cellSide
         originY = 0.5 * cellSide
@@ -42,7 +39,7 @@ class BoardView: UIView {
     
     func drawCircleAt(col: Int, row: Int, color: UIColor) {
         let radius: CGFloat = 0.4 * cellSide
-        let circle = UIBezierPath(arcCenter: CGPoint(x: originX + CGFloat(col) * cellSide, y: originY + CGFloat(row) * cellSide), radius: radius, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let circle = UIBezierPath(arcCenter: CGPoint(x: originX + CGFloat(col) * cellSide, y: originY + CGFloat(5 - row) * cellSide), radius: radius, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         
         color.setFill()
         circle.fill()
