@@ -23,6 +23,11 @@ class BoardView: UIView {
         drawPieces()
     }
     
+    func colOf(x: CGFloat) -> Int {
+        let col: Int = Int(x / cellSide)
+        return col
+    }
+    
     func drawPieces() {
         for piece in shadowPiecesBox {
             drawCircleAt(col: piece.col, row: piece.row, color: piece.player == Conn4Player.red ? UIColor.red : UIColor.yellow)

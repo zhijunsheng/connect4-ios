@@ -23,13 +23,15 @@ class Conn4ViewController: UIViewController {
         peerID = MCPeerID(displayName: UIDevice.current.name)
         session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
         
-        // for testing
-        conn4Board.dropAt(col: 3, player: .red)
-        conn4Board.dropAt(col: 3, player: .yellow)
-        conn4Board.dropAt(col: 3, player: .red)
-        conn4Board.dropAt(col: 3, player: .red)
-        
         boardView.shadowPiecesBox = conn4Board.piecesBox
+    }
+    
+    @IBAction func dropPiece(_ sender: UITapGestureRecognizer) {
+        let fingerX = sender.location(in: boardView).x
+        let col = boardView.colOf(x: fingerX)
+        conn4Board.dropAt(col: col, player: .red)
+        boardView.shadowPiecesBox = conn4Board.piecesBox
+        boardView.setNeedsDisplay()
     }
     
     @IBAction func advertise(_ sender: UIButton) {
