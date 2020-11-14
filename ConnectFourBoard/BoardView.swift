@@ -13,7 +13,6 @@ class BoardView: UIView {
     var cellSide: CGFloat = -1
     
     var shadowPiecesBox: Set<Conn4Piece> = []
-    
 
     override func draw(_ rect: CGRect) {
         // tmp code
