@@ -8,12 +8,14 @@
 import Foundation
 
 struct Conn4Board: CustomStringConvertible {
+    private var playerInTurn: Conn4Player = .red
     private(set) var piecesBox: Set<Conn4Piece> = []
     
-    mutating func dropAt(col: Int, player: Conn4Player) {
+    mutating func dropAt(col: Int) {
         let numberOfPieces = numberOfPiecesAt(col: col)
-        let droppedPiece = Conn4Piece(col: col, row: numberOfPieces, player: player)
+        let droppedPiece = Conn4Piece(col: col, row: numberOfPieces, player: playerInTurn)
         piecesBox.insert(droppedPiece)
+        playerInTurn = playerInTurn == .red ? .yellow : .red
     }
     
     func numberOfPiecesAt(col: Int) -> Int {

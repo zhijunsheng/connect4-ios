@@ -29,7 +29,7 @@ class Conn4ViewController: UIViewController {
     @IBAction func dropPiece(_ sender: UITapGestureRecognizer) {
         let fingerX = sender.location(in: boardView).x
         let col = boardView.colOf(x: fingerX)
-        conn4Board.dropAt(col: col, player: .red)
+        conn4Board.dropAt(col: col)
         boardView.shadowPiecesBox = conn4Board.piecesBox
         boardView.setNeedsDisplay()
     }
