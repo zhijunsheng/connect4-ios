@@ -33,6 +33,11 @@ class Conn4ViewController: UIViewController {
         conn4Board.dropAt(col: col)
         boardView.shadowPiecesBox = conn4Board.piecesBox
         boardView.setNeedsDisplay()
+        
+        let colStr: String = "\(col)" // 3 => "3"
+        if let colData = colStr.data(using: .utf8) {
+            try? session.send(colData, toPeers: session.connectedPeers, with: .reliable)
+        }
     }
     
     @IBAction func advertise(_ sender: UIButton) {
@@ -63,7 +68,13 @@ extension Conn4ViewController: MCSessionDelegate {
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-            
+        if let colStr = String(data: data, encoding: .utf8), let col = Int(colStr) {
+            conn4Board.dropAt(col: col)
+            boardView.shadowPiecesBox = conn4Board.piecesBox
+            DispatchQueue.main.async {
+                self.boardView.setNeedsDisplay()
+            }
+        }
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
